@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>햄버거 검색</title>
+</head>
+<body>
+    <h1>햄버거 검색</h1>
+    <form method="GET">
+        <input type="text" name="keyword">
+        <button type="submit">검색</button>
+    </form>
+    <h2>검색 결과 : </h2>
+        {% for burger in burgers %}
+        <div style=" font-weight: 600; color: brown; margin-bottom: 20px;">
+            {{ burger.name }}
+            (가격 : {{ burger.price }}
+            칼로리 : {{ burger.calories }}kcal)
+        </div>
+    {% endfor %}
+</body>
+</html>

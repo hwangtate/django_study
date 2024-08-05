@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>햄버거 목록</title>
+</head>
+<body>
+    <h1> 햄버거 목록 </h1>
+    {% for burger in burgers %}
+        <div style=" font-weight: 600; color: brown; margin-bottom: 20px;">
+            {{ burger.name }}
+            (가격 : {{ burger.price }}
+            칼로리 : {{ burger.calories }}kcal)
+        </div>
+    {% endfor %}
+</body>
+</html>
